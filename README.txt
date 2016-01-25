@@ -1,0 +1,1 @@
+Patternfinder is a simple program I wrote to detect basic patterns in strings of characters. Given a text file and a segment length, the program will go through the text file and count the occurrences of duplicate segments of the given length. My initial inspiration for the program was to see just how random a human-generated sequence of numbers actually is.
