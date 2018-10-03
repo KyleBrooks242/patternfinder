@@ -1,4 +1,9 @@
-import StringIO, sys, os
+import sys, os, math
+
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 ''' The goal of this program is to determine if "random" user input contains
 any patterns. It will read from a text file of user-generated input, and, given
@@ -78,7 +83,7 @@ def find_patterns(text, seg_array, CHAR_COUNT, SEG_SIZE):
 
   # Not sure what length to make the pattern array, for now it is simply
   # a guess that there will be less patterns than half the length of the text
-  patterns = [[None for x in range(2)] for x in range(CHAR_COUNT / 2)]
+  patterns = [[None for x in range(2)] for x in range(math.floor(CHAR_COUNT / 2))]
   
   seg_ptr = 0
   text_ptr = SEG_SIZE
